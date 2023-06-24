@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const UseEffectBasics = () => {
   const [value, setValue] = useState(0);
@@ -7,6 +7,16 @@ const UseEffectBasics = () => {
   };
 
   sayHello();
+
+  // callback fn cannot be async
+  // useEffect(async () => { ...})
+  useEffect(() => {
+    // this is okay
+    const someFetch = async () => {
+      //await ...
+    }
+    console.log('hello from useEffect');
+  }, []);
 
   return (
     <div>

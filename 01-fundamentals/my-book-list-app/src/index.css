@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #f1f5f8;
+  color: #222;
+}
+.book-list {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+.book {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #f0f0f0;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.book h3 {
+  margin-top: 0.5rem;
+}
+.book h4 {
+  color: red; /** this will not applied as inline style preceed*/
+  letter-spacing: 5px;
+}
+.book p {
+  margin-top: 0.5rem;
+}
+.book img {
+  width: 50%;
+}
+.number {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #c35600;
+  color: #fff;
+}
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+@media screen and (min-width:768px) {
+  .book-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
